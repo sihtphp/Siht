@@ -1,0 +1,23 @@
+{
+    "name": "siht/siht",
+    "type": "library",
+    "description": "Siht for PHP",
+    "keywords": ["siht","siht framework"],
+    "homepage": "https://github.com/luizdeangeli/Siht",    
+    "authors": [
+        {
+            "name": "Luiz Henrique de Angeli",
+            "email": "luizdeangeli@gmail.com",
+            "homepage": "http://www.luizdeangeli.com.br",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "slim/slim": "2.x"
+    },
+    "autoload": {
+        "psr-0": { "Siht": "." }
+    }
+}
