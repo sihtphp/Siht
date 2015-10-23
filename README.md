@@ -21,8 +21,6 @@ O Siht framework utiliza como base o [Slim Framework] (https://packagist.org/pac
 - **HandleOut** *[opicional]*: Manipular as informações retornadas do Repository, pode-se gera um Exception neste momento e parar a requisição.
 - **Model** *[opicional]*: Criar objetos a partir de classe com o atributos e relações entre classes.
 
-
-
 # Começando
 
 ## Instalar
