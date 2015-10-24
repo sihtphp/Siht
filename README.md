@@ -4,6 +4,7 @@ Siht é um pequeno framework desenvolvido com objetivo de criar a camada de inter
 
 O Siht framework utiliza como base o [Slim Framework] (https://packagist.org/packages/slim/slim) para criar a camada de RESTful.
 
+
 ###Como funciona:
 
 1. O Slim receber a requisição e através da rotas é criada uma instância do **Controller** da **Classe** e o **Método* desejado.
