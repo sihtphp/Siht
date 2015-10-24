@@ -4,6 +4,7 @@ Siht é um pequeno framework desenvolvido com objetivo de criar a camada de inter
 
 O Siht framework utiliza como base o [Slim Framework] (https://packagist.org/packages/slim/slim) para criar a camada de RESTful.
 
+
 ###Como funciona:
 
 1. O Slim receber a requisição e através da rotas é criada uma instância do **Controller** da **Classe** e o **Método* desejado.
@@ -20,8 +21,6 @@ O Siht framework utiliza como base o [Slim Framework] (https://packagist.org/pac
 - **Repository** *[opicional]*: Realizar a ~interação com banco de dados.
 - **HandleOut** *[opicional]*: Manipular as informações retornadas do Repository, pode-se gera um Exception neste momento e parar a requisição.
 - **Model** *[opicional]*: Criar objetos a partir de classe com o atributos e relações entre classes.
-
-
 
 # Começando
 
@@ -98,7 +97,7 @@ $app->group('/City', function () use ($app) {
     });
     $app->post('/', function () use ($app) {
         try {
-            $request = json_decode($app->request->getBody());
+            $request = json_decode($app->request()->getBody());
             $controller = new \Application\City\Controller();
             $result = $controller->create($request);
             $app->status(201); //created
@@ -110,7 +109,7 @@ $app->group('/City', function () use ($app) {
     });
     $app->put('/:id', function () use ($app) {
         try {
-            $request = json_decode($app->request->getBody());
+            $request = json_decode($app->request()->getBody());
             $controller = new \Application\City\Controller();
             $result = $controller->update($request);
             $app->status(201);
