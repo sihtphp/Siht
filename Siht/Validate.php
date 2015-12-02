@@ -23,7 +23,6 @@ final class Validate {
 
     public function equal($value) {
         if (is_object($this->value)) {
-            
         } elseif (is_array($this->value)) {
             if (!(count(array_diff($this->value, $value)) == 0) || !(count(array_diff($value, $this->value)) == 0))
                 $this->error();
