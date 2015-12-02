@@ -38,6 +38,9 @@ final class Validate {
         if (is_array($this->value)) {
             if (!(in_array($value, $this->value)))
                 $this->error();
+        } else if (is_array($value)) {
+            if (!(in_array($this->value, $value)))
+                $this->error();
         } else {
             if (!(strstr($this->value, $value)))
                 $this->error();
