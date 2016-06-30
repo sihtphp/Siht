@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.0",
-        "slim/slim": "^3.0@RC"
+        "slim/slim": "3.x"
     },
     "autoload": {
         "psr-0": { "Siht": "." }
