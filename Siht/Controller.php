@@ -76,6 +76,7 @@ abstract class Controller {
             $this->setHandleOut($object);
         }
     }
+    
 
     public function __call($methodName, $arguments) {
 
