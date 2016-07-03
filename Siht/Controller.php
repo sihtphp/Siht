@@ -9,7 +9,7 @@ abstract class Controller {
     private $handleOut;
     private $repository;
 
-    public function __construct() {        
+    public function __construct() {
         $class = new \ReflectionClass(get_called_class());
         $this->setController($class->getNamespaceName());
     }
@@ -49,20 +49,32 @@ abstract class Controller {
     protected function setController($namespace) {
 
         $className = "\\{$namespace}\Factory";
-        if (class_exists($className))
-            $this->setFactory(new $className());
+        if (class_exists($className)) {
+            $object = new $className();
+            $object->setController($this);
+            $this->setFactory($object);
+        }
 
         $className = "\\{$namespace}\HandleIn";
-        if (class_exists($className))
-            $this->setHandleIn(new $className());
+        if (class_exists($className)) {
+            $object = new $className();
+            $object->setController($this);
+            $this->setHandleIn($object);
+        }
 
         $className = "\\{$namespace}\Repository";
-        if (class_exists($className))
-            $this->setRepository(new $className());
+        if (class_exists($className)) {
+            $object = new $className();
+            $object->setController($this);
+            $this->setRepository($object);
+        }
 
         $className = "\\{$namespace}\HandleOut";
-        if (class_exists($className))
-            $this->setHandleOut(new $className());
+        if (class_exists($className)) {
+            $object = new $className();
+            $object->setController($this);
+            $this->setHandleOut($object);
+        }
     }
 
     public function __call($methodName, $arguments) {
