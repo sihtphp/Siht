@@ -26,4 +26,5 @@ abstract class Handle {
     protected function halt($response) {
         return new \Siht\ResponseHalt($response);
     }
+
 }

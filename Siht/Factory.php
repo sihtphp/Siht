@@ -13,4 +13,5 @@ abstract class Factory {
     public function setController($controller) {
         $this->__controller__ = $controller;
     }
+
 }
