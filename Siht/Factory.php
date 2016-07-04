@@ -6,11 +6,11 @@ abstract class Factory {
 
     private $__controller__;
 
-    protected function getController() {
+    public function getController() {
         return $this->__controller__;
     }
 
-    protected function setController($controller) {
+    public function setController($controller) {
         $this->__controller__ = $controller;
     }
 }
