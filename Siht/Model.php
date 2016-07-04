@@ -13,5 +13,4 @@ abstract class Model {
     protected function setController($controller) {
         $this->__controller__ = $controller;
     }
-
 }

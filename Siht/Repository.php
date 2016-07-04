@@ -13,5 +13,4 @@ abstract class Repository {
     protected function setController($controller) {
         $this->__controller__ = $controller;
     }
-
 }

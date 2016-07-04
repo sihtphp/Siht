@@ -77,7 +77,6 @@ abstract class Controller {
         }
     }
     
-
     public function __call($methodName, $arguments) {
 
         $response = NULL;
